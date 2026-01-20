@@ -239,12 +239,12 @@ section, .hero {
 }
 
 .left-side {
-    left: 2%; 
+    left: 1%; 
     animation: floatLeft 7s ease-in-out infinite;
 }
 
 .right-side {
-    right: 2%; 
+    right: 1%; 
     animation: floatRight 8s ease-in-out infinite;
 }
 
@@ -1446,109 +1446,80 @@ section, .hero {
 
 
 
-/* --- FOOTER STRUCTURE & ALIGNMENT --- */
-/* --- ULTRA-COMPACT FOOTER --- */
-/* --- ZYRIC'S COMPACT FOOTER --- */
 .footer { 
     background: #1a221c; /* Deep Forest */
     color: #ffffff; 
-    padding: 30px 10% 20px; 
     
-    /* --- FIXED POSITION LOGIC --- */
-    position: fixed; /* Naka-lock sa viewport */
-    bottom: 0;      /* Nakadikit sa pinaka-ilalim */
-    left: 0;        /* Start mula sa kaliwa */
-    width: 100%;    /* Stretch hanggang kanan */
-    z-index: 100;   /* Siguradong nasa ibabaw ng ibang content */
+    /* --- TANGGALIN ANG FIXED LOGIC --- */
+    position: relative; 
+    width: 100%;
     
+    /* Slim Padding */
+    padding: 20px 5%; 
+    margin-top: 50px; /* Space mula sa content sa itaas */
     display: block;
-    box-shadow: 0 -5px 20px rgba(0,0,0,0.2); /* Kaunting anino para sa depth */
-}
-
-/* Magdagdag ng padding sa body para hindi matakpan ng fixed footer ang huling part ng content mo */
-body {
-    padding-bottom: 200px; /* Adjust base sa height ng footer mo */
 }
 
 .footer-grid { 
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
-    text-align: center; 
-    border-bottom: 1px solid rgba(255,255,255,0.05); 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1); 
     padding-bottom: 15px; 
+    margin-bottom: 15px;
 }
 
-/* Label Style */
+.f-box {
+    text-align: left; /* Mas professional na alignment para sa slim look */
+}
+
 .f-label { 
     font-family: 'Oswald', sans-serif; 
-    letter-spacing: 2px; 
-    color: #a3b18a; /* Sage Green */
-    margin-bottom: 8px; 
-    display: block; 
-    font-size: 10px; 
+    letter-spacing: 1px; 
+    color: #a3b18a; 
+    font-size: 9px; 
     text-transform: uppercase;
-    font-weight: 500;
+    display: block;
+    margin-bottom: 4px;
 }
 
-/* Content Text */
 .footer-grid p {
-    font-size: 12px;
-    line-height: 1.4; 
-    opacity: 0.7;
+    font-size: 11px;
+    opacity: 0.8;
     font-family: 'Inter', sans-serif;
     margin: 0;
+    line-height: 1.2;
 }
 
-/* Social Links & Copyright Area */
 .footer-bottom { 
-    padding-top: 15px; 
     display: flex;
-    justify-content: space-between; /* Hiwalay ang socials at copyright */
+    justify-content: space-between; 
     align-items: center;
 }
 
 .f-socials a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 10px;
-    margin: 0 10px;
-    opacity: 0.5;
+    font-size: 9px;
+    margin-right: 15px;
+    opacity: 0.6;
     font-family: 'Oswald', sans-serif;
-    transition: 0.3s;
-}
-
-.f-socials a:hover {
-    opacity: 1;
 }
 
 .f-copyright { 
-    font-size: 9px; 
+    font-size: 8px; 
     opacity: 0.4; 
-    letter-spacing: 2px; 
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
+    letter-spacing: 1px; 
     margin: 0;
 }
 
-/* --- RESPONSIVE FIXES --- */
+/* --- MOBILE: Mananatiling Slim --- */
 @media (max-width: 768px) {
-    .footer {
-        position: relative; /* Sa mobile, mas maganda kung hindi fixed para hindi kainin ang maliit na screen */
-        padding: 40px 5% 20px;
-    }
-    
-    body {
-        padding-bottom: 0;
-    }
-
     .footer-grid { 
-        grid-template-columns: 1fr; 
-        gap: 20px; 
+        flex-direction: column; 
+        align-items: center;
+        text-align: center;
+        gap: 20px;
     }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 15px;
-    }
+    .f-box { text-align: center; }
 }
