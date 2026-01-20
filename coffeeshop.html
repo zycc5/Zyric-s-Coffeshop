@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zyric - Premium Coffee Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ <nav class="nav-container">
+    <div class="nav-capsule">
+        <div class="nav-links left">
+            <a href="javascript:void(0)" onclick="showPage('home', this)" class="active">HOME</a>
+            <a href="javascript:void(0)" onclick="showPage('about', this)">ABOUT</a>
+            <a href="javascript:void(0)" onclick="showPage('menu', this)">MENU</a>
+            <a href="javascript:void(0)" onclick="showPage('gallery', this)">GALLERY</a>
+        </div>
+
+        <div class="logo-circle">
+            <div class="logo-content">
+                <span class="logo-top">ZYRIC</span>
+                <span class="logo-bottom">COFFEE</span>
+            </div>
+        </div>
+
+        <div class="nav-links right">
+            <a href="javascript:void(0)" onclick="showPage('blog', this)">BLOG</a>
+            <a href="javascript:void(0)" onclick="showPage('shop', this)">SHOP</a>
+            <a href="javascript:void(0)" onclick="showPage('contact', this)">CONTACT</a>
+           <div class="cart-wrapper" style="cursor: pointer;">
+
+ <div class="cart-wrapper" style="cursor: pointer;" onclick="showCart()">
+    <span class="icon">👜</span>
+    <span class="cart-badge" id="cart-count">0</span>
+</div>
+
+<div id="cart-modal">
+    <h3>Your Cart</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: ₱<span id="cart-total">0</span></p>
+    <button class="close-btn" onclick="closeCart(event)">Close</button>
+</div>
+
+    </div>
+</div>
+    </div>
+</nav>
+
+
+   <header id="home" class="hero">
+    <div class="hero-content">
+        <h3 class="hero-subtitle">ZYRIC'S FINEST</h3>
+        <h1 class="hero-title">EXPERIENCE THE PERFECT<br>COFFEE CUP IN TOWN</h1>
+        <p class="hero-est">ESTD — 2026</p>
+
+        <div class="cup-wrapper">
+            <img src="pouring.png" alt="Pouring Coffee" class="side-float left-side">
+            
+            <img src="coffee-cup-image.png" alt="Zyric Coffee Cup" class="main-cup">
+            
+            <img src="coffeeglass.png" alt="Coffee Glass" class="side-float right-side">
+        </div>
+    </div>
+</header>
+
+<section id="about" class="about-minimal">
+    <div class="about-header-simple">
+        <span class="eyebrow">SINCE 2026</span>
+        <h1>The Zyric Ritual</h1>
+    </div>
+
+    <div class="minimal-story">
+        <div class="story-note-wrapper">
+            <div class="note-paper">
+                <div class="note-pin"></div>
+                <h2 class="minimal-title">Our Story</h2>
+                <div class="note-body">
+                    <p><strong>Zyrine & Cedric</strong> founded Zyric on a simple belief: that coffee is more than a drink; it is a moment of stillness in a loud world. What started as a shared passion for the perfect roast has evolved into a sanctuary for the local community.</p>
+                    <p>Our philosophy is "Less, but better." By sourcing single-origin beans and roasting them in small batches, we ensure that every extraction honors the hands that grew the coffee.</p>
+                </div>
+                <div class="note-footer">
+                    <p class="signature">With love, Z & C</p>
+                    <span class="memo-id">MEMO NO. 026</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="story-visual">
+            <div class="image-frame">
+                <img src="shop-minimal.jpg" alt="Zyric Coffee Interior">
+                <div class="image-label">INTERIOR VIEW — BKLYN</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="minimal-quote">
+        <div class="quote-line"></div>
+        <p>"Coffee is a lot more than just a drink; it’s something happening."</p>
+        <cite>— loppy</cite>
+    </div>
+</section>
+
+            
+<section id="menu" class="menu-page">
+    <div class="menu-header">
+        <h2 class="section-title">MAIN MENU</h2>
+        <p class="section-subtitle">Bold brews. Smooth rituals.</p>
+    </div>
+
+    <div class="menu-row">
+        <div class="menu-content" id="content-signatures">
+            <h3 class="category-name">🔥 Signature Zyric Creations</h3>
+            <div class="size-header"><span>S</span><span>M</span><span>L</span></div>
+            
+            <div class="menu-item active-highlight" onclick="moveSlide('slider1', 'content-signatures', 0)">
+                <div class="item-info">
+                    <span class="item-name">Zyric House Blend</span>
+                    <div class="item-prices"><span>₱140</span><span>₱160</span><span>₱180</span></div>
+                </div>
+                <p>Rich, balanced espresso with notes of chocolate & caramel.</p>
+            </div>
+
+            <div class="menu-item" onclick="moveSlide('slider1', 'content-signatures', 1)">
+                <div class="item-info">
+                    <span class="item-name">Midnight Zyric</span>
+                    <div class="item-prices"><span>₱150</span><span>₱170</span><span>₱190</span></div>
+                </div>
+                <p>Dark roast, smoky and intense, for serious coffee lovers.</p>
+            </div>
+
+            <div class="menu-item" onclick="moveSlide('slider1', 'content-signatures', 2)">
+                <div class="item-info">
+                    <span class="item-name">Golden Zyric Latte</span>
+                    <div class="item-prices"><span>₱160</span><span>₱180</span><span>₱200</span></div>
+                </div>
+                <p>Espresso, steamed milk, honey, and a hint of turmeric.</p>
+            </div>
+
+            <div class="menu-item" onclick="moveSlide('slider1', 'content-signatures', 3)">
+                <div class="item-info">
+                    <span class="item-name">Zyric Mocha Cloud</span>
+                    <div class="item-prices"><span>₱170</span><span>₱190</span><span>₱210</span></div>
+                </div>
+                <p>Espresso, premium cocoa, milk, topped with whipped foam.</p>
+            </div>
+        </div>
+        
+        <div class="menu-image arch-top">
+            <div class="image-slider" id="slider1">
+                <button class="slider-arrow prev" onclick="changeSlide('slider1', 'content-signatures', -1); event.stopPropagation();">&#10094;</button>
+                <button class="slider-arrow next" onclick="changeSlide('slider1', 'content-signatures', 1); event.stopPropagation();">&#10095;</button>
+                <div class="slides">
+                    <img src="signature-coffee.jpg" class="active" alt="House Blend">
+                    <img src="midnight.jpg" alt="Midnight Zyric">
+                    <img src="golden.jpg" alt="Golden Latte">
+                    <img src="mocha.png" alt="Mocha Cloud">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-row reverse">
+        <div class="menu-image arch-top">
+            <div class="image-slider" id="slider2">
+                <button class="slider-arrow prev" onclick="changeSlide('slider2', 'content-espresso', -1); event.stopPropagation();">&#10094;</button>
+                <button class="slider-arrow next" onclick="changeSlide('slider2', 'content-espresso', 1); event.stopPropagation();">&#10095;</button>
+                <div class="slides">
+                    <img src="americano.jpg" class="active" alt="Americano">
+                    <img src="latte.jpg" alt="Latte">
+                    <img src="vanilla-latte.jpg" alt="Vanilla Latte">
+                </div>
+            </div>
+        </div>
+        <div class="menu-content" id="content-espresso">
+            <h3 class="category-name">☕ Espresso & Milk-Based</h3>
+            <p class="temp-note">Served Hot or Iced</p>
+            <div class="size-header"><span>S</span><span>M</span><span>L</span></div>
+            
+            <div class="menu-item active-highlight" onclick="moveSlide('slider2', 'content-espresso', 0)">
+                <div class="item-info">
+                    <span class="item-name">Americano</span>
+                    <div class="item-prices"><span>₱130</span><span>₱150</span><span>₱170</span></div>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="moveSlide('slider2', 'content-espresso', 1)">
+                <div class="item-info">
+                    <span class="item-name">Latte</span>
+                    <div class="item-prices"><span>₱150</span><span>₱170</span><span>₱190</span></div>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="moveSlide('slider2', 'content-espresso', 2)">
+                <div class="item-info">
+                    <span class="item-name">Vanilla / Caramel Latte</span>
+                    <div class="item-prices"><span>₱160</span><span>₱180</span><span>₱200</span></div>
+                </div>
+            </div>
+            <p class="milk-note">Milk options: Oat, Almond, Soy (+₱20)</p>
+        </div>
+    </div>
+
+    <div class="menu-row">
+        <div class="menu-content" id="content-noncoffee">
+            <h3 class="category-name">🌱 Non-Coffee Drinks</h3>
+            <div class="size-header"><span>S</span><span>M</span><span>L</span></div>
+            
+            <div class="menu-item active-highlight" onclick="moveSlide('slider3', 'content-noncoffee', 0)">
+                <div class="item-info">
+                    <span class="item-name">Matcha Latte</span>
+                    <div class="item-prices"><span>₱160</span><span>₱180</span><span>₱200</span></div>
+                </div>
+            </div>
+
+            <div class="menu-item" onclick="moveSlide('slider3', 'content-noncoffee', 1)">
+                <div class="item-info">
+                    <span class="item-name">Hot Chocolate</span>
+                    <div class="item-prices"><span>₱150</span><span>₱170</span><span>₱190</span></div>
+                </div>
+            </div>
+
+            <h3 class="category-name" style="margin-top:40px;">🧊 Cold Brew Specials</h3>
+            <div class="menu-item" onclick="moveSlide('slider3', 'content-noncoffee', 2)">
+                <div class="item-info">
+                    <span class="item-name">Cold Brew Zyric</span>
+                    <div class="item-prices"><span style="width:auto;">M: ₱190</span><span style="width:auto;">L: ₱210</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-image arch-top">
+            <div class="image-slider" id="slider3">
+                <button class="slider-arrow prev" onclick="changeSlide('slider3', 'content-noncoffee', -1); event.stopPropagation();">&#10094;</button>
+                <button class="slider-arrow next" onclick="changeSlide('slider3', 'content-noncoffee', 1); event.stopPropagation();">&#10095;</button>
+                <div class="slides">
+                    <img src="matcha.jpg" class="active" alt="Matcha">
+                    <img src="hot-chocolate.jpg" alt="Hot Chocolate">
+                    <img src="cold-brew.jpg" alt="Cold Brew">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-row reverse">
+        <div class="menu-image arch-top">
+            <div class="image-slider" id="slider4">
+                <button class="slider-arrow prev" onclick="changeSlide('slider4', 'content-pastries', -1); event.stopPropagation();">&#10094;</button>
+                <button class="slider-arrow next" onclick="changeSlide('slider4', 'content-pastries', 1); event.stopPropagation();">&#10095;</button>
+                <div class="slides">
+                    <img src="pastries.jpg" class="active" alt="Croissant">
+                    <img src="danish.jpg" alt="Almond Danish">
+                    <img src="banana-bread.jpg" alt="Banana Bread">
+                </div>
+            </div>
+        </div>
+        <div class="menu-content" id="content-pastries">
+            <h3 class="category-name">🥐 Fresh Bites</h3>
+            
+            <div class="menu-item active-highlight" onclick="moveSlide('slider4', 'content-pastries', 0)">
+                <div class="item-info"><span class="item-name">Butter Croissant</span><span>₱110</span></div>
+            </div>
+            <div class="menu-item" onclick="moveSlide('slider4', 'content-pastries', 1)">
+                <div class="item-info"><span class="item-name">Almond Danish</span><span>₱140</span></div>
+            </div>
+            <div class="menu-item" onclick="moveSlide('slider4', 'content-pastries', 2)">
+                <div class="item-info"><span class="item-name">Banana Bread</span><span>₱120</span></div>
+            </div>
+
+            <h3 class="category-name" style="margin-top:40px;">✨ Add-Ons & Extras</h3>
+            <p class="description">Extra Shot ₱40 • Syrups ₱30 • Whipped Cream ₱25 • Cocoa Dust ₱15</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery" class="gallery-section">
+    <div class="gallery-header">
+        <span class="eyebrow">THE VISUAL EXPERIENCE</span>
+        <h2>GALLERY</h2>
+        
+        <div class="filters" id="gallery-filter">
+            <span class="filter-btn active" data-filter="all">ALL</span>
+            <span class="filter-btn" data-filter="captured">CAPTURED</span>
+            <span class="filter-btn" data-filter="interior">INTERIOR</span>
+            <span class="filter-btn" data-filter="coffee">COFFEE</span>
+            <span class="filter-btn" data-filter="products">PRODUCTS</span>
+            <span class="filter-btn" data-filter="beans">BEANS</span>
+        </div>
+    </div>
+
+    <div class="gallery-grid">
+        <div class="g-item" data-category="captured"><img src="coffee1.jpg" alt="Zyrine brewing"></div>
+        <div class="g-item" data-category="captured"><img src="coffee2.jpg" alt="Cedric with customer"></div>
+        <div class="g-item" data-category="captured"><img src="coffee3.jpg" alt="People laughing"></div>
+        <div class="g-item" data-category="captured"><img src="coffee4.jpg" alt="Barista pour"></div>
+        
+        <div class="g-item" data-category="captured"><img src="coffee5.jpg" alt="Friends at table"></div>
+        <div class="g-item" data-category="interior"><img src="interior1.jpg" alt="Shop Seating"></div>
+        <div class="g-item" data-category="interior"><img src="interior2.jpg" alt="Counter Detail"></div>
+        <div class="g-item" data-category="interior"><img src="interior3.jpg" alt="Cozy Corner"></div>
+
+        <div class="g-item" data-category="coffee"><img src="coffee.jpg" alt="Latte Art"></div>
+        <div class="g-item" data-category="coffee"><img src="coffeee.jpg" alt="Espresso Shot"></div>
+        <div class="g-item" data-category="coffee"><img src="coffee-iced.jpg" alt="Iced Coffee"></div>
+        <div class="g-item" data-category="coffee"><img src="coffee-pour.jpg" alt="V60 Pour"></div>
+
+        <div class="g-item" data-category="products"><img src="product1.jpg" alt="Coffee Bag"></div>
+        <div class="g-item" data-category="products"><img src="product2.jpg" alt="Eco Mug"></div>
+        <div class="g-item" data-category="products"><img src="product3.jpg" alt="Brewing Kit"></div>
+        <div class="g-item" data-category="beans"><img src="beans1.jpg" alt="Roasted Beans"></div>
+
+        <div class="g-item" data-category="beans"><img src="beans2.jpg" alt="Raw Beans"></div>
+        <div class="g-item" data-category="beans"><img src="beans3.jpg" alt="Grinder Detail"></div>
+        <div class="g-item" data-category="interior"><img src="interior4.jpg" alt="Window Seat"></div>
+        <div class="g-item" data-category="captured"><img src="coffee6.jpg" alt="Cafe Entrance"></div>
+    </div>
+</section>
+
+<section id="blog" class="wp-journal-container">
+    <header class="blog-main-header" id="blog-header">
+        <div class="header-overlay"></div>
+        <div class="header-text">
+            <span class="header-label">OUR BLOG</span>
+            <h1 class="header-title">ZYRIC'S COFFEE SHOP</h1>
+            <p class="header-tagline" id="blog-tagline">Est. 2016 — A collection of brewing rituals and coffee culture.</p>
+        </div>
+    </header>
+
+    <div class="wp-layout-wrapper">
+        <main class="wp-content-main">
+            
+            <div id="quotes-view" class="content-view" style="display:none;">
+                <h2 class="view-title">Daily Wisdom</h2>
+                <div class="wp-quotes-grid">
+                    <div class="wp-quote-card">
+                        <span class="q-date">JAN 21, 2026</span>
+                        <p>"Life is like a pour-over; it requires patience and precision."</p>
+                    </div>
+                    <div class="wp-quote-card">
+                        <span class="q-date">JAN 20, 2026</span>
+                        <p>"The best stories are found at the bottom of a coffee cup."</p>
+                    </div>
+                    <div class="wp-quote-card">
+                        <span class="q-date">JAN 19, 2026</span>
+                        <p>"Brewing is a ritual, not a chore. Savor the slow bloom."</p>
+                    </div>
+                    <div class="wp-quote-card">
+                        <span class="q-date">JAN 18, 2026</span>
+                        <p>"Behind every successful person is a substantial amount of coffee."</p>
+                    </div>
+                    <div class="wp-quote-card">
+                        <span class="q-date">JAN 17, 2026</span>
+                        <p>"Your morning ritual defines your day. Make it sincere."</p>
+                    </div>
+                    <div class="wp-quote-card">
+                        <span class="q-date">JAN 16, 2026</span>
+                        <p>"Complexity is born from simple beans and steady hands."</p>
+                    </div>
+                    <div class="wp-quote-card">
+                        <span class="q-date">JAN 15, 2026</span>
+                        <p>"Coffee is the silent partner in every great breakthrough."</p>
+                    </div>
+                    <div class="wp-quote-card">
+                        <span class="q-date">JAN 14, 2026</span>
+                        <p>"Find clarity in the steam and courage in the caffeine."</p>
+                    </div>
+                    <div class="wp-quote-card">
+                        <span class="q-date">JAN 13, 2026</span>
+                        <p>"A bad day with coffee is better than a good day without it."</p>
+                    </div>
+                    <div class="wp-quote-card">
+                        <span class="q-date">JAN 12, 2026</span>
+                        <p>"Stark space, sincere coffee, soulful conversations."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="articles-view" class="content-view">
+                
+                <article class="wp-post-card" data-cat="counter">
+                    <div class="wp-post-thumb">
+                        <img src="brewing-ritual.jpg" alt="Zyric Brewing">
+                        <div class="wp-post-cat">BEHIND THE COUNTER</div>
+                    </div>
+                    <div class="wp-post-body">
+                        <span class="wp-post-date">JANUARY 21, 2026</span>
+                        <h2 class="wp-post-title">Grind Your Coffee Just Before Brewing</h2>
+                        <p class="wp-post-excerpt">The secret to our House Blend’s vibrant notes lies in the timing. Oxygen is the enemy of flavor; once the bean is broken, the clock starts ticking. We explore why 15 minutes makes all the difference.</p>
+                        <a href="#" class="wp-read-more">CONTINUE READING —</a>
+                    </div>
+                </article>
+
+                <article class="wp-post-card" data-cat="seasonal">
+                    <div class="wp-post-thumb">
+                        <img src="latte-art.jpg" alt="Slow Bloom">
+                        <div class="wp-post-cat">SEASONAL SIPS</div>
+                    </div>
+                    <div class="wp-post-body">
+                        <span class="wp-post-date">JANUARY 14, 2026</span>
+                        <h2 class="wp-post-title">The Art of the Slow Bloom</h2>
+                        <p class="wp-post-excerpt">Patience is the main ingredient. Learn why the 'bloom'—that magical moment when hot water meets fresh grounds—is the most important 30 seconds of your day.</p>
+                        <a href="#" class="wp-read-more">CONTINUE READING —</a>
+                    </div>
+                </article>
+
+                <article class="wp-post-card" data-cat="culture">
+                    <div class="wp-post-thumb">
+                        <img src="shop-minimal.jpg" alt="Zyric Interior">
+                        <div class="wp-post-cat">COFFEE CULTURE</div>
+                    </div>
+                    <div class="wp-post-body">
+                        <span class="wp-post-date">JANUARY 05, 2026</span>
+                        <h2 class="wp-post-title">A Space for Clarity: Our Brooklyn Roots</h2>
+                        <p class="wp-post-excerpt">Zyric’s isn’t just a shop; it’s a sanctuary. From the choice of matte black finishes to our open-counter policy, everything is designed for transparency and focus.</p>
+                        <a href="#" class="wp-read-more">CONTINUE READING —</a>
+                    </div>
+                </article>
+
+            </div>
+        </main>
+
+        <aside class="wp-sidebar">
+            <div class="sidebar-widget">
+                <h3 class="widget-title">JOURNAL SECTIONS</h3>
+                <ul class="wp-cat-list">
+                    <li class="active" data-filter="home">Home</li>
+                    <li data-filter="quotes-only">Daily Quotes For You</li>
+                    <li data-filter="brew">Daily Brew</li>
+                    <li data-filter="counter">Behind The Counter</li>
+                    <li data-filter="seasonal">Seasonal Sips</li>
+                    <li data-filter="culture">Coffee Culture</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="widget-title">ABOUT THE SHOP</h3>
+                <img src="interior1.jpg" class="sidebar-about-img" alt="Zyric Seating">
+                <p class="sidebar-about-text">Zyric's Coffee Shop is a Stark & Sincere space dedicated to high-fidelity brewing and soulful community since 2016.</p>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="widget-title">ARTISAN GEAR</h3>
+                <div class="sidebar-product-mini">
+                    <img src="product2.jpg" alt="Eco Mug">
+                    <div>
+                        <p>Signature Eco Mug</p>
+                        <a href="#shop">View Shop</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</section>
+
+<section id="shop" class="shop-section">
+    <div class="shop-header">
+        <span class="eyebrow">ZYRIC PROVISIONS</span>
+        <h2 class="section-title">THE ROASTERY SHOP</h2>
+        <p class="shop-subtitle">Premium beans and brewing essentials delivered to your door.</p>
+    </div>
+
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="product-image">
+                <div class="product-badge">BEST SELLER</div>
+                <img src="product4.jpg" alt="Midnight Blend">
+                <button class="quick-add" onclick="addToCart('Midnight Blend', 650)">ADD TO CART</button>
+            </div>
+            <div class="product-info">
+                <h3>The Artisan Selection Gift SetD</h3>
+                <p>Complete Tasting & Brewing Kit</p>
+                <span class="price">₱2,050.00</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="product2.jpg" alt="Eco Mug">
+                <button class="quick-add" onclick="addToCart('Eco Mug', 850)">ADD TO CART</button>
+            </div>
+            <div class="product-info">
+                <h3>he Signature Eco Mug</h3>
+                <p>Reusable, Bamboo-based, 12oz</p>
+                <span class="price">₱350.00</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="v60.jpg" alt="V60">
+                <button class="quick-add" onclick="addToCart('Matte Black V60', 1400)">ADD TO CART</button>
+            </div>
+            <div class="product-info">
+                <h3>MATTE BLACK V60</h3>
+                <p>Ceramic Dripper | Limited Edition</p>
+                <span class="price">₱1,400.00</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="product3.jpg" alt="Brewing Kit">
+                <button class="quick-add" onclick="addToCart('Brewing Kit', 4200)">ADD TO CART</button>
+            </div>
+            <div class="product-info">
+                <h3>Brewing Kit</h3>
+                <p>Everything you need for the perfect pour.</p>
+                <span class="price">₱1,200.00</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="product1.jpg" alt="Coffee Bag">
+                <button class="quick-add" onclick="addToCart('Coffee Bag', 600)">ADD TO CART</button>
+            </div>
+            <div class="product-info">
+                <h3>Coffee Bag</h3>
+                <p>100% Arabica | Medium Roast</p>
+                <span class="price">₱600.00</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="contact-section" style="display:none;">
+    <div class="contact-container">
+        
+        <div class="contact-info">
+            <span class="eyebrow">CONTACT</span>
+            <h2 class="section-title">SAY HELLO</h2>
+            
+            <div class="info-grid">
+                <div class="info-block">
+                    <p class="label">VISIT</p>
+                    <p>123 Coffee Lane, Taytay, Rizal</p>
+                </div>
+                <div class="info-block">
+                    <p class="label">OPENING HOURS</p>
+                    <p>Mon — Fri / 07:00 — 22:00</p>
+                    <p>Sat — Sun / 08:00 — 23:00</p>
+                </div>
+                <div class="info-block">
+                    <p class="label">ENQUIRIES</p>
+                    <p>hello@zyric.com</p>
+                    <p>+63 912 345 6789</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-minimal">
+            
+            <form id="zyric-contact-form">
+                <div class="input-row">
+                    <input type="text" id="sender-name" placeholder="NAME" required>
+                </div>
+                
+                <div class="input-row">
+                    <input type="email" id="email" placeholder="EMAIL ADDRESS" required>
+                    <span id="email-warning" class="error-msg">Please include an '@' in the email address.</span>
+                </div>
+
+                <div class="input-row">
+                    <textarea placeholder="MESSAGE" rows="1" id="auto-grow-msg" required></textarea>
+                </div>
+                
+                <div class="button-wrapper">
+                    <button type="submit" class="contact-submit-minimal">
+                        SEND MESSAGE <span>→</span>
+                    </button>
+                </div>
+            </form>
+
+            <div id="contact-success" class="success-message" style="display:none;">
+                <div class="success-content">
+                    <span class="success-eyebrow">MESSAGE SENT</span>
+                    <h3 class="success-title">THANK YOU FOR REACHING OUT.</h3>
+                    <p class="success-text">
+                        We have received your message. Please wait as our team reviews your inquiry; 
+                        we will get back to you via email within 24-48 hours.
+                    </p>
+                    <p class="owner-signature">— Zyric, Owner</p>
+                    
+                    <button type="button" onclick="resetForm()" class="back-to-form-btn">
+                        SEND ANOTHER MESSAGE
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+   <footer class="footer">
+    <div class="footer-grid">
+        <div class="f-box">
+            <span class="f-label">LOCATION</span>
+            <p>123 Coffee Lane<br>Taytay, Rizal</p>
+        </div>
+
+        <div class="f-box">
+            <span class="f-label">RESERVATION / ENQUIRIES</span>
+            <p>+63 912 345 6789</p>
+            <p class="f-email">hello@zyric.com</p>
+        </div>
+
+        <div class="f-box">
+            <span class="f-label">BREWING HOURS</span>
+            <p>MON - SAT : 7.00AM - 8.00PM<br>SUNDAY : CLOSED</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="f-socials">
+            <a href="#">INSTAGRAM</a>
+            <a href="#">FACEBOOK</a>
+            <a href="#">TIKTOK</a>
+        </div>
+        <p class="f-copyright">© 2026 ZYRIC COFFEE. STARK & SINCERE.</p>
+    </div>
+</footer>
+
+
+<script src="script.js"></script>
+</body>
+</html>
